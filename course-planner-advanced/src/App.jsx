@@ -1,12 +1,22 @@
-import React from 'react'
+import Reat from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
 
+
 const App = () => {
-    if(getCourses().length === 0){
-        saveCourses(CourseData)
+    let courses = getCourses();
+    const updatedCourse = [...courses]
+
+    CourseData.forEach(data => {
+        const exists = updatedCourse.some(course => course.code === data.code)
+        if (!exists) return updatedCourse.push(data)
+    })
+
+    if (updatedCourse.length !== courses.length) {
+        saveCourses(updatedCourse);
+        courses = updatedCourse; 
     }
 
     return (

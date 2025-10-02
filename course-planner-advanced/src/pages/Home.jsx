@@ -1,11 +1,13 @@
 import React from 'react'
 import { CourseList} from '../pages'
+import { Header } from '../components'
 
 const Home = () => {
     return (
-        <div>
+        <>
+            {/* <Header></Header> */}
             <CourseList></CourseList>
-        </div>
+        </>
     )
 }
 
