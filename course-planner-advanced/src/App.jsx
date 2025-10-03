@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
+import { Header } from './components'
 
 
 const App = () => {
@@ -20,7 +21,9 @@ const App = () => {
     }
 
     return (
+        
         <BrowserRouter>
+            <Header></Header>
             <Routes>
                 <Route path='/' element={<Home></Home>}></Route>
                 <Route path='/course' element={<CourseList></CourseList>}></Route>

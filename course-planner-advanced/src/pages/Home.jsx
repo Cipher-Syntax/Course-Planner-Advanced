@@ -1,11 +1,13 @@
 import React from 'react'
 import { CourseList} from '../pages'
-import { Header } from '../components'
+import { Filtering, HeroSection } from '../components'
 
 const Home = () => {
     return (
         <>
-            {/* <Header></Header> */}
+            <Header></Header>
+            <HeroSection></HeroSection>
+            <Filtering></Filtering>
             <CourseList></CourseList>
         </>
     )

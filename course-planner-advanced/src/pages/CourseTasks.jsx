@@ -12,7 +12,7 @@ const CourseTasks = () => {
 
     return (
         <div>
-            <h3>Tasks for {course.name}</h3>
+            <h3 className="mt-10 text-3xl">Tasks for {course.name}</h3>
             {taskId ? <TasksDetails course={course} taskId={taskId} /> : <TasksList course={course} />}
         </div>
     );
