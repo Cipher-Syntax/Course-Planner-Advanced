@@ -9,7 +9,7 @@ const Header = () => {
                 <BsCalendar4 className='text-2xl sm:text-3xl text-green-600' />
                 <div>
                     <h1 className='leading-relaxed tracking-wide text-lg sm:text-xl md:text-2xl text-green-700 font-semibold'>
-                        Course-Planner-Advanced
+                        Course-Advanced-Planner
                     </h1>
                     <p className='text-sm sm:text-base text-gray-500'>by Spectrum Lab</p>
                 </div>
