@@ -49,7 +49,7 @@ course-planner-advanced/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/course-planner-advanced.git
+git clone https://github.com/Cipher-Syntax/Course-Planner-Advanced.git
 cd course-planner-advanced
 ```
 
