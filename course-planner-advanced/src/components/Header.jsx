@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
         <header className='w-full bg-white border-b border-gray-200 shadow-md px-4 sm:px-8 md:px-10 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-y-4 sm:gap-y-0'>
-            <div className='flex items-center justify-center sm:justify-start gap-x-4 sm:gap-x-6 md:gap-x-10 text-center sm:text-left'>
-                <BsCalendar4 className='text-2xl sm:text-3xl text-green-600' />
+            <div className='flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-x-4 sm:gap-x-4 md:gap-x-5 text-center sm:text-left'>
+                <BsCalendar4 className='text-2xl sm:text-3xl text-black' />
                 <div>
-                    <h1 className='leading-relaxed tracking-wide text-lg sm:text-xl md:text-2xl text-green-700 font-semibold'>
+                    <h1 className='leading-relaxed tracking-wide text-2xl sm:text-2xl md:text-3xl text-green-900 font-bold'>
                         Course-Advanced-Planner
                     </h1>
                     <p className='text-sm sm:text-base text-gray-500'>by Spectrum Lab</p>
