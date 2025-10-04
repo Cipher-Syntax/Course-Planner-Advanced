@@ -4,24 +4,41 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header className='w-full px-10 py-5 flex items-center justify-between shadow-lg'>
-            <div className='flex items-center justify-start gap-x-10'>
-                <div className='flex items-center gap-5'>
-                    <BsCalendar4 className='text-3xl'></BsCalendar4>
-                    <div>
-                        <h1 className='leading-relaxed tracking-wider text-2xl text-green-700 font-medium'>Course-Planner-Advanced</h1>
-                        <p>by Spectrum Lab</p>
-                    </div>
+        <header className='w-full bg-white border-b border-gray-200 shadow-md px-4 sm:px-8 md:px-10 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-y-4 sm:gap-y-0'>
+            <div className='flex items-center justify-center sm:justify-start gap-x-4 sm:gap-x-6 md:gap-x-10 text-center sm:text-left'>
+                <BsCalendar4 className='text-2xl sm:text-3xl text-green-600' />
+                <div>
+                    <h1 className='leading-relaxed tracking-wide text-lg sm:text-xl md:text-2xl text-green-700 font-semibold'>
+                        Course-Planner-Advanced
+                    </h1>
+                    <p className='text-sm sm:text-base text-gray-500'>by Spectrum Lab</p>
                 </div>
             </div>
 
-            <div className='flex items-center justify-between gap-x-5'>
-                <NavLink to="/course" className={({isActive}) => isActive ? "text-white px-5 py-2 bg-green-500 rounded-md" : "text-green-500 px-5 py-2 bg-white rounded-md border-green-500 border-2"}>Courses</NavLink>
-                <NavLink to="/teachers" className={({isActive}) => isActive ? "text-white px-5 py-2 bg-green-500 rounded-md" : "text-green-500 px-5 py-2 bg-white rounded-md border-green-500 border-2"}>Teachers</NavLink>
+            <div className='flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-5'>
+                <NavLink 
+                    to="/course" 
+                    className={({isActive}) => 
+                        isActive 
+                        ? "text-white px-4 sm:px-5 py-2 bg-green-700 rounded-md text-sm sm:text-base transition-colors duration-200 ease-in-out" 
+                        : "text-green-500 px-4 sm:px-5 py-2 bg-white rounded-md border border-green-500 text-sm sm:text-base hover:bg-green-500 hover:text-white transition-colors duration-200 ease-in-out"
+                    }
+                >
+                    Courses
+                </NavLink>
+                <NavLink 
+                    to="/teachers" 
+                    className={({isActive}) => 
+                        isActive 
+                        ? "text-white px-4 sm:px-5 py-2 bg-green-700 rounded-md text-sm sm:text-base transition-colors duration-200 ease-in-out" 
+                        : "text-green-500 px-4 sm:px-5 py-2 bg-white rounded-md border border-green-500 text-sm sm:text-base hover:bg-green-500 hover:text-white transition-colors duration-200 ease-in-out"
+                    }
+                >
+                    Teachers
+                </NavLink>
             </div>
-            
         </header>
     )
-    }
+}
 
 export default Header

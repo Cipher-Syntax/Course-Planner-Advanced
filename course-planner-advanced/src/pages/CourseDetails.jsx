@@ -13,65 +13,73 @@ const CourseDetails = () => {
     const location = useLocation();
     const isTasksOpen = location.pathname.endsWith("/tasks");
 
-    if(!course) return <p>No Course Found</p>
+    if (!course) return <p>No Course Found</p>
 
     return (
-        
         <div>
-            <div className='w-full px-20 mt-20'>
-                <Link to="/course" className='flex items-center gap-x-2 cursor-pointer'>
-                    <IoIosArrowRoundBack size={30}></IoIosArrowRoundBack>
+            <Header />
+            <div className='w-full px-4 md:px-20 mt-10 md:mt-20'>
+                <Link to="/course" className='flex items-center gap-x-2 cursor-pointer mb-6'>
+                    <IoIosArrowRoundBack size={30} />
                     <p className='leading-relaxed tracking-wider'>Back</p>
                 </Link>
 
-                <div>
-                    <div className={'p-5 rounded-t-2xl h-48'} style={{backgroundColor: course.themeColor}}>
-                        <h1 className='text-3xl text-white tracking-widest leading-relaxed font-medium mt-10'>{course.name}</h1>
-                        <h3 className='text-2xl text-white tracking-widest leading-relaxed font-medium'>{course.code}</h3>
+                <div className="rounded-2xl overflow-hidden">
+                    <div
+                        className={'p-5 h-48 flex flex-col justify-center'}
+                        style={{ backgroundColor: course.themeColor }}
+                    >
+                        <h1 className='text-3xl md:text-4xl text-white tracking-widest leading-relaxed font-medium'>
+                            {course.name}
+                        </h1>
+                        <h3 className='text-xl md:text-2xl text-white tracking-widest leading-relaxed font-medium'>
+                            {course.code}
+                        </h3>
                     </div>
 
-                    <div className='flex items-center justify-start gap-x-30'>
-                        <div className='p-5 w-[400px]'>
-                            <div className='flex items-center gap-x-1 mt-2'>
-                                <FaRegUser></FaRegUser>
-                                <p className='text-2xl'>Prof. {course.teacher}</p>
+                    <div className='flex flex-col md:flex-row gap-6 p-5'>
+                        <div className='flex-1 space-y-4'>
+                            <div className='flex items-center gap-x-2'>
+                                <FaRegUser />
+                                <p className='text-xl'>Prof. {course.teacher}</p>
                             </div>
 
-                            <div className='flex items-center gap-x-1 text-[15px] mt-3'>
-                                <p>{course.semester}</p> | 
+                            <div className='flex items-center gap-x-2 text-sm md:text-base'>
+                                <p>{course.semester}</p> |
                                 <div className='flex gap-x-1 items-center'>
-                                    <FaUnity></FaUnity>
+                                    <FaUnity />
                                     <p>{course.units} Units</p>
                                 </div>
                             </div>
 
-                            <div className='flex items-center gap-x-1 text-[15px] mt-2'>
-                                <IoMdCalendar></IoMdCalendar>
+                            <div className='flex items-center gap-x-2 text-sm md:text-base'>
+                                <IoMdCalendar />
                                 <p>{course.days.join(', ')} - {course.start_time} : {course.end_time}</p>
                             </div>
-                            
                         </div>
 
-                        <div>
-                            {
-                                isTasksOpen ? (
-                                    <Link to={`/course/${code}`}>
-                                        <p className='text-2xl cursor-pointer text-red-500 absolute animate-bounce ease-in-out'>Close Tasks</p>
-                                    </Link>
-                                ) : (
-                                    <Link to="tasks">
-                                        <p className='text-2xl cursor-pointer mt-[-50px] text-green-500 absolute animate-bounce ease-in-out'>View Tasks</p>
-                                        <p className='text-center absolute'>Stay organized and keep track of your academic progress</p>
-                                    </Link>
-                                )
-                            }
-                            <Outlet></Outlet>
+                        <div className='flex-1 relative'>
+                            {isTasksOpen ? (
+                                <Link to={`/course/${code}`}>
+                                    <p className='text-lg md:text-2xl cursor-pointer text-red-500 animate-bounce ease-in-out mb-2'>
+                                        Close Tasks
+                                    </p>
+                                </Link>
+                            ) : (
+                                <Link to="tasks">
+                                    <p className='text-lg md:text-2xl cursor-pointer text-green-500 animate-bounce ease-in-out mb-1'>
+                                        View Tasks
+                                    </p>
+                                    <p className='text-sm text-gray-500'>Stay organized and keep track of your academic progress</p>
+                                </Link>
+                            )}
+                            <div className="mt-6">
+                                <Outlet />
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
