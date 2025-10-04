@@ -13,7 +13,7 @@ const Help = () => {
     const faqs = [
         {
             question: "How do I search for a course?",
-            answer: "Go to the Courses page and use the search bar or filters to find your course by code, teacher, or schedule."
+            answer: "Go to the Courses page and use the search bar or filters to find your course by code, or name."
         },
         {
             question: "How can I update my course details?",
