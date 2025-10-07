@@ -299,7 +299,7 @@ export const CourseData = [
         ]
     },
     {
-    code: "WEB101",
+        code: "WEB101",
         name: "Web Development Fundamentals",
         units: 3,
         days: ["Mon", "Wed"],
@@ -334,6 +334,7 @@ export const CourseData = [
                 ]
             }
         ]
-    }
+    },
+    
 
 ];
