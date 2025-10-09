@@ -20,7 +20,7 @@ const CourseDetails = () => {
         <div>
             <Header />
             <div className='w-full px-4 md:px-20 mt-10 md:mt-20'>
-                <Link to={`/course/${search}`} className='flex items-center gap-x-2 cursor-pointer mb-6'>
+                <Link to={`/course/?${search}`} className='flex items-center gap-x-2 cursor-pointer mb-6'>
                     <IoIosArrowRoundBack size={30} />
                     <p className='leading-relaxed tracking-wider'>Back</p>
                 </Link>
