@@ -69,23 +69,6 @@ App will be available at: **[http://localhost:5173/](http://localhost:5173/)**
 
 ---
 
-## 📸 Screenshots
-
-* **Landing Page** – Welcome screen before courses.
-* **Courses Page** – Browse, search, and filter courses.
-* **Course Details + Tasks** – Organize tasks with deadlines.
-* **Teachers Page** – Overview of all teachers.
-
----
-
-## 🔧 Customization
-
-* **Colors:** Currently using Tailwind’s `green-500` and `white`. Update in `tailwind.config.js` or components.
-* **Data:** Modify `src/data/CourseData.js` to add/edit courses, teachers, or tasks.
-* **Icons:** Uses `react-icons`, easily replaceable.
-
----
-
 ## 🙌 Acknowledgements
 
 * Built with [React](https://react.dev/) and [Tailwind CSS](https://tailwindcss.com/).

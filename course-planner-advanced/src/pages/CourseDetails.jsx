@@ -12,6 +12,7 @@ const CourseDetails = () => {
     const course = getCourseByCode(code)
     const location = useLocation();
     const isTasksOpen = location.pathname.endsWith("/tasks");
+    const search = location.search || "";
 
     if (!course) return <p>No Course Found</p>
 
@@ -19,7 +20,7 @@ const CourseDetails = () => {
         <div>
             <Header />
             <div className='w-full px-4 md:px-20 mt-10 md:mt-20'>
-                <Link to="/course" className='flex items-center gap-x-2 cursor-pointer mb-6'>
+                <Link to={`/course/${search}`} className='flex items-center gap-x-2 cursor-pointer mb-6'>
                     <IoIosArrowRoundBack size={30} />
                     <p className='leading-relaxed tracking-wider'>Back</p>
                 </Link>
@@ -41,7 +42,7 @@ const CourseDetails = () => {
                         <div className='flex-1 space-y-4'>
                             <div className='flex items-center gap-x-2'>
                                 <FaRegUser />
-                                <p className='text-xl'>Prof. {course.teacher}</p>
+                                <p className='text-xl'>{course.teacher.includes("Prof.") ? course.teacher : `Prof. ${course.teacher}` }</p>
                             </div>
 
                             <div className='flex items-center gap-x-2 text-sm md:text-base'>

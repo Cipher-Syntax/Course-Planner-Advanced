@@ -69,12 +69,12 @@ const CourseList = () => {
 
                                     <div className='flex items-center gap-x-1 text-xs md:text-[12px] mt-2'>
                                         <FaRegUser></FaRegUser>
-                                        <p>Prof. {course.teacher}</p>
+                                        <p>{course.teacher.includes("Prof.") ? course.teacher : `Prof ${course.teacher}` }</p>
                                     </div>
                                 </div>
 
                                 <div className='flex flex-col sm:flex-row items-stretch justify-between px-4 md:px-5 mt-6 md:mt-10 gap-3 md:gap-x-3 mb-4'>
-                                    <Link to={`/course/${course.code}`} className='w-full sm:w-1/2'>
+                                    <Link to={`/course/${course.code}/?${searchParams.toString()}`} className='w-full sm:w-1/2'>
                                         <button 
                                             type='button' 
                                             className='bg-green-500 text-white font-bold text-center w-full rounded-full cursor-pointer py-2 md:py-0'
@@ -82,7 +82,7 @@ const CourseList = () => {
                                             Details
                                         </button>
                                     </Link>
-                                    <Link to={`/course/${course.code}/tasks`} className='w-full sm:w-1/2'>
+                                    <Link to={`/course/${course.code}/tasks/?${searchParams.toString()}`} className='w-full sm:w-1/2'>
                                         <button 
                                             type='button' 
                                             className='bg-white text-green-500 border-[1px] font-bold border-green-500 text-center w-full rounded-full cursor-pointer py-2 md:py-0'
