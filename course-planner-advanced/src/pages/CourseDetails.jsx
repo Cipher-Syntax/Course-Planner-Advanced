@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet, useParams, Link, useLocation } from 'react-router-dom'
 import { getCourseByCode } from '../utils/storage';
-import { Header } from '../components';
+import { Header, Footer } from '../components';
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { FaUnity } from "react-icons/fa";
 import { IoMdCalendar } from "react-icons/io";
@@ -81,6 +81,7 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     )
 }

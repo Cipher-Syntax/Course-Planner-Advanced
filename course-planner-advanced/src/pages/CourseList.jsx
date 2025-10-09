@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { FaUnity } from "react-icons/fa";
 import { IoMdCalendar } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa";
-import { Filtering, FloatingHelpButton, Header, HeroSection } from '../components';
+import { Filtering, FloatingHelpButton, Footer, Header, HeroSection } from '../components';
 
 const CourseList = () => {
     const courses = getCourses();
@@ -97,6 +97,7 @@ const CourseList = () => {
                 }
             </div>
             <FloatingHelpButton></FloatingHelpButton>
+            <Footer></Footer>
         </>
     )
 }
