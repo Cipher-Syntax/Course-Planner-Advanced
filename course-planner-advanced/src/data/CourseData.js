@@ -21,7 +21,8 @@ export const CourseData = [
                     { criteriaName: "Completeness", criteriaDescription: "All required sections fully included", score: 10 },
                     { criteriaName: "Accuracy", criteriaDescription: "Correct explanation of binary concepts", score: 15 },
                     { criteriaName: "Clarity", criteriaDescription: "Easy to follow and well-written", score: 5 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "2", 
@@ -34,7 +35,8 @@ export const CourseData = [
                     { criteriaName: "Code Quality", criteriaDescription: "Readable, maintainable, and efficient code", score: 20 },
                     { criteriaName: "Accuracy", criteriaDescription: "Correct results for all calculations", score: 25 },
                     { criteriaName: "Presentation", criteriaDescription: "User interface clarity and usability", score: 25 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -59,7 +61,8 @@ export const CourseData = [
                     { criteriaName: "Completeness", criteriaDescription: "All assigned problems attempted", score: 10 },
                     { criteriaName: "Accuracy", criteriaDescription: "Correct solutions and steps shown", score: 20 },
                     { criteriaName: "Neatness", criteriaDescription: "Legible and well-organized solutions", score: 10 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "4", 
@@ -70,7 +73,8 @@ export const CourseData = [
                 criteria: [
                     { criteriaName: "Accuracy", criteriaDescription: "Correct answers to problems", score: 20 },
                     { criteriaName: "Clarity", criteriaDescription: "Work and reasoning clearly shown", score: 10 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -96,7 +100,8 @@ export const CourseData = [
                     { criteriaName: "Content", criteriaDescription: "Relevant details about self and goals", score: 20 },
                     { criteriaName: "Grammar & Mechanics", criteriaDescription: "Proper grammar, spelling, punctuation", score: 10 },
                     { criteriaName: "Creativity", criteriaDescription: "Originality and engaging writing style", score: 5 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "6", 
@@ -109,7 +114,8 @@ export const CourseData = [
                     { criteriaName: "Clarity", criteriaDescription: "Easy-to-understand structure", score: 10 },
                     { criteriaName: "Relevance", criteriaDescription: "Focused and on-topic", score: 10 },
                     { criteriaName: "Formatting", criteriaDescription: "Consistent style and neat presentation", score: 5 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -135,7 +141,8 @@ export const CourseData = [
                     { criteriaName: "Creativity", criteriaDescription: "Visual appeal and originality", score: 20 },
                     { criteriaName: "Organization", criteriaDescription: "Clear sequence of events", score: 20 },
                     { criteriaName: "Presentation", criteriaDescription: "Professional and neat output", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "8", 
@@ -147,7 +154,8 @@ export const CourseData = [
                     { criteriaName: "Thesis & Argument", criteriaDescription: "Clear central argument with supporting evidence", score: 20 },
                     { criteriaName: "Content Depth", criteriaDescription: "Detailed analysis of social and economic impacts", score: 20 },
                     { criteriaName: "Grammar & Style", criteriaDescription: "Correct mechanics and academic tone", score: 10 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -172,7 +180,8 @@ export const CourseData = [
                     { criteriaName: "Procedure", criteriaDescription: "Steps clearly followed and documented", score: 15 },
                     { criteriaName: "Data Accuracy", criteriaDescription: "Correct measurements and calculations", score: 20 },
                     { criteriaName: "Analysis", criteriaDescription: "Interpretation of results is sound", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "10", 
@@ -183,7 +192,8 @@ export const CourseData = [
                 criteria: [
                     { criteriaName: "Accuracy", criteriaDescription: "Correct answers to problems", score: 25 },
                     { criteriaName: "Clarity", criteriaDescription: "Reasoning clearly shown", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -208,7 +218,8 @@ export const CourseData = [
                     { criteriaName: "Observation", criteriaDescription: "Detailed and accurate recording", score: 15 },
                     { criteriaName: "Analysis", criteriaDescription: "Correct interpretation of reactions", score: 20 },
                     { criteriaName: "Safety", criteriaDescription: "Proper lab procedures followed", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "12", 
@@ -220,7 +231,8 @@ export const CourseData = [
                     { criteriaName: "Completeness", criteriaDescription: "Covers all trends in detail", score: 20 },
                     { criteriaName: "Accuracy", criteriaDescription: "Correct scientific explanations", score: 20 },
                     { criteriaName: "Clarity", criteriaDescription: "Well-structured and easy to follow", score: 10 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -245,7 +257,8 @@ export const CourseData = [
                     { criteriaName: "Insight", criteriaDescription: "Shows deep understanding of conditioning principles", score: 20 },
                     { criteriaName: "Clarity", criteriaDescription: "Clearly explained example", score: 15 },
                     { criteriaName: "Grammar", criteriaDescription: "Proper grammar and flow", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "14", 
@@ -257,7 +270,8 @@ export const CourseData = [
                     { criteriaName: "Content", criteriaDescription: "Covers all assigned theories", score: 25 },
                     { criteriaName: "Presentation", criteriaDescription: "Clear and engaging delivery", score: 20 },
                     { criteriaName: "Teamwork", criteriaDescription: "Equal contribution from members", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -282,7 +296,8 @@ export const CourseData = [
                     { criteriaName: "Correctness", criteriaDescription: "Queries return expected results", score: 25 },
                     { criteriaName: "Efficiency", criteriaDescription: "Optimized use of SQL operations", score: 20 },
                     { criteriaName: "Clarity", criteriaDescription: "Well-documented queries", score: 15 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "16", 
@@ -294,7 +309,8 @@ export const CourseData = [
                     { criteriaName: "Functionality", criteriaDescription: "All CRUD features implemented", score: 30 },
                     { criteriaName: "Database Design", criteriaDescription: "Normalized and well-structured schema", score: 25 },
                     { criteriaName: "Usability", criteriaDescription: "Clear and simple user interface", score: 20 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
@@ -319,7 +335,8 @@ export const CourseData = [
                     { criteriaName: "Structure", criteriaDescription: "Well-structured HTML with semantic tags", score: 20 },
                     { criteriaName: "Design", criteriaDescription: "Good use of CSS styling and layout", score: 25 },
                     { criteriaName: "Responsiveness", criteriaDescription: "Works on both desktop and mobile", score: 20 }
-                ]
+                ],
+                uploaded_file: null
             },
             { 
                 id: "18", 
@@ -331,7 +348,8 @@ export const CourseData = [
                     { criteriaName: "Functionality", criteriaDescription: "Add, edit, and delete tasks work correctly", score: 30 },
                     { criteriaName: "Code Quality", criteriaDescription: "Clean, readable, and commented JavaScript code", score: 20 },
                     { criteriaName: "User Experience", criteriaDescription: "Smooth interactions and good usability", score: 20 }
-                ]
+                ],
+                uploaded_file: null
             }
         ]
     },
