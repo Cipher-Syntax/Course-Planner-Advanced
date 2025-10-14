@@ -53,7 +53,7 @@ const TasksDetails = ({ course, taskId }) => {
     return (
         <div className="space-y-4">
             <div className="flex items-center gap-x-2">
-                <Link to="">
+                <Link to={() => window.history.back()}>
                     <div className="flex items-center gap-x-2 cursor-pointer text-green-600 hover:underline">
                         <IoIosArrowRoundBack size={24} />
                         <p>Back to tasks</p>
