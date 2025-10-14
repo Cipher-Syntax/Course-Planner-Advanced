@@ -7,6 +7,9 @@ import Help from '../pages/Help'
 import StudentLogin from './StudentLogin'
 import StudentRegister from './StudentRegister'
 import TeacherLogin from './TeacherLogin'
+import TeacherDashboard from './teacherDashboard'
+import TeacherCourseDetails from './TeacherCourseDetails'
+import TeacherAddTasks from './TeacherAddTasks'
 
 export {
     Home,
@@ -18,4 +21,7 @@ export {
     StudentLogin,
     StudentRegister,
     TeacherLogin,
+    TeacherDashboard,
+    TeacherCourseDetails,
+    TeacherAddTasks,
 }
