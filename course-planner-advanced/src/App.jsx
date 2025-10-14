@@ -1,6 +1,6 @@
 import Reat from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers } from './pages'
+import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
 import { Header } from './components'
@@ -25,6 +25,9 @@ const App = () => {
         <BrowserRouter>
             {/* <Header></Header> */}
             <Routes>
+                <Route path='/studentRegister' element={<StudentRegister></StudentRegister>}></Route>
+                <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
+                <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
                 <Route path='/' element={<Home></Home>}></Route>
                 <Route path='/course' element={<CourseList></CourseList>}></Route>
                 <Route path='/course/:code' element={<CourseDetails></CourseDetails>}>

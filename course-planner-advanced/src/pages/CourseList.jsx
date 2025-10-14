@@ -8,7 +8,7 @@ import { Filtering, FloatingHelpButton, Footer, Header, HeroSection } from '../c
 
 const CourseList = () => {
     const courses = getCourses();
-
+    
     const [searchParams, setSearchParams] = useSearchParams();
     const q = searchParams.get("q") || "";
     const selectedDay = searchParams.get("day") || "";

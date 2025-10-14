@@ -36,6 +36,7 @@ const Header = () => {
                 >
                     Teachers
                 </NavLink>
+                <NavLink to="/studentLogin" className='font-bold' >Logout</NavLink>
             </div>
         </header>
     )
