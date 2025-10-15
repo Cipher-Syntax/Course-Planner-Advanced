@@ -1,6 +1,6 @@
 import Reat from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks } from './pages'
+import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks, TeacherAddSubject } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
 import { Header } from './components'
@@ -29,6 +29,7 @@ const App = () => {
                 <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
                 <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
                 <Route path='/teacherDashboard' element={<TeacherDashboard></TeacherDashboard>}></Route>
+                <Route path='/teacherAddSubject' element={<TeacherAddSubject></TeacherAddSubject>}></Route>
                 <Route path='/teacherAddTasks/:code' element={<TeacherAddTasks></TeacherAddTasks>}></Route>
                 <Route path='/teacherCourseDetails/:code' element={<TeacherCourseDetails></TeacherCourseDetails>}></Route>
                 <Route path='/' element={<Home></Home>}></Route>

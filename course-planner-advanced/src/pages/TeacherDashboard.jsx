@@ -5,51 +5,35 @@ import { CourseData } from '../data/CourseData';
 const TeacherDashboard = () => {
     const [teacherCourses, setTeacherCourses] = useState([]);
     const [teacherName, setTeacherName] = useState('');
-    const navigate = useNavigate();
 
     useEffect(() => {
         const currentTeacher = JSON.parse(localStorage.getItem('currentTeacherLoggedIn'));
         if (currentTeacher) {
             setTeacherName(currentTeacher.username);
-            const filteredCourses = CourseData.filter(
-                (course) => course.teacher === currentTeacher.username
+
+            const storedCourses = JSON.parse(localStorage.getItem("courses")) || [];
+            const filteredCourses = storedCourses.filter(
+            (course) => course.teacher === currentTeacher.username
             );
             setTeacherCourses(filteredCourses);
         }
     }, []);
 
-    const handleLogout = () => {
-        localStorage.removeItem('currentTeacherLoggedIn');
-        navigate('/teacherLogin');
-    };
-
-    const handleAddSubject = () => {
-        navigate('/addSubject');
-    };
-
-    // const handleCourseClick = (id) => {
-    //     navigate(`/teacherCourseDetails/${id}`);
-    // };
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Header */}
             <header className="bg-white shadow-md p-4 flex justify-between items-center">
                 <h1 className="text-2xl font-bold text-gray-800">Teacher Dashboard</h1>
-                <div className="space-x-2">
-                    <button
-                        onClick={handleAddSubject}
-                        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
-                    >
+                <Link to="/teacherAddSubject" className="space-x-2">
+                    <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
                         Add Subject
                     </button>
-                    <button
-                        onClick={handleLogout}
+                    <Link to="/teacherLogin"
                         className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
                     >
                         Logout
-                    </button>
-                </div>
+                    </Link>
+                </Link>
             </header>
 
             <div className="p-6">
@@ -62,15 +46,16 @@ const TeacherDashboard = () => {
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {teacherCourses.map((course) => (
-                            <Link to={`/teacherCourseDetails/${course.code}`}
-                                key={course.id}
-                                // onClick={() => handleCourseClick(course.id)}
-                                className={`cursor-pointer border rounded-lg p-5 shadow-lg hover:shadow-xl transition duration-300 bg-${course.themeColor}-50`}
+                            <Link to={`/teacherCourseDetails/${course.code}`} key={course.code}
+                                className='cursor-pointer rounded-lg p-5 shadow-lg hover:shadow-xl transition duration-300'
+                                 style={{
+                                    borderLeft: `5px solid ${course.themeColor}`,
+                                }}
                             >
                                 <div className="flex justify-between items-center">
                                     <h3 className="text-xl font-semibold text-gray-800">{course.name}</h3>
-                                    <span className={`px-3 py-1 rounded-full text-white bg-${course.themeColor}-600`}>
-                                        {course.code}s
+                                    <span className='px-3 py-1 rounded-full text-white' style={{backgroundColor: `${course.themeColor}`}}>
+                                        {course.code}
                                     </span>
                                 </div>
                                 <p className="text-gray-700 mt-2"><strong>Units:</strong> {course.units}</p>

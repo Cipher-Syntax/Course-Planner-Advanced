@@ -10,6 +10,7 @@ import TeacherLogin from './TeacherLogin'
 import TeacherDashboard from './teacherDashboard'
 import TeacherCourseDetails from './TeacherCourseDetails'
 import TeacherAddTasks from './TeacherAddTasks'
+import TeacherAddSubject from './TeacherAddSubject'
 
 export {
     Home,
@@ -24,4 +25,5 @@ export {
     TeacherDashboard,
     TeacherCourseDetails,
     TeacherAddTasks,
+    TeacherAddSubject,
 }

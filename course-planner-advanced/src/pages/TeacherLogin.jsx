@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FaChalkboardTeacher, FaLock } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { FaChalkboardTeacher, FaLock, FaUserGraduate } from 'react-icons/fa';
+import { useNavigate, Link } from 'react-router-dom';
 import { TeacherData } from '../data/TeacherData';
 
 const TeacherLogin = () => {
@@ -63,6 +63,13 @@ const TeacherLogin = () => {
                     Login
                 </button>
             </form>
+
+            <div className="w-full flex justify-end mt-5 max-w-sm">
+                <Link to="/studentLogin" className="text-green-500 text-2xl">
+                    <FaUserGraduate></FaUserGraduate>
+                </Link>
+            </div>
+
         </div>
     );
 };

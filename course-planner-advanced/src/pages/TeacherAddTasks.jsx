@@ -14,6 +14,8 @@ const TeacherAddTasks = () => {
     const [uploadedFile, setUploadedFile] = useState(null);
     const [message, setMessage] = useState('');
 
+    const storedMovies = JSON.parse(localStorage.getItem("courses")) || [];
+
     const handleAddCriteria = () => {
         setCriteria([...criteria, { criteriaName: '', criteriaDescription: '', score: '' }]);
     };
@@ -31,7 +33,28 @@ const TeacherAddTasks = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({ taskTitle, description, dueDate, time, criteria, uploadedFile });
+        // console.log({ taskTitle, description, dueDate, time, criteria, uploadedFile });
+        const newTasks = {
+            id: Date.now(),
+            title: taskTitle,
+            description: description,
+            due_date: dueDate,
+            time: time,
+            criteria: criteria
+        }
+
+        const updatedTasksInCourse = storedMovies.map((course) => {
+            if (course.code === code) {
+                return {
+                    ...course,
+                    tasks: [...(course.tasks || []), newTasks]
+                };
+            }
+            return course;
+        });
+
+        localStorage.setItem('courses', JSON.stringify(updatedTasksInCourse));
+
         setMessage("Task added successfully")
         const timer = setTimeout(() => {
             setMessage('')
@@ -141,10 +164,10 @@ const TeacherAddTasks = () => {
                     </button>
                 </div>
 
-                <div>
+                {/* <div>
                     <label className="block text-gray-700 font-medium mb-2">Upload File (Optional)</label>
                     <input type="file" onChange={(e) => setUploadedFile(e.target.files[0])} />
-                </div>
+                </div> */}
 
                 <button
                     type="submit"

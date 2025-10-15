@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaUserGraduate, FaLock } from 'react-icons/fa';
+import { FaUserGraduate, FaLock, FaChalkboardTeacher } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
 const StudentLogin = () => {
@@ -29,6 +29,7 @@ const StudentLogin = () => {
 
     return (
         <div className='flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4'>
+            <h2 className="text-2xl font-bold mb-6">Student Login</h2>
             <form className='flex flex-col gap-4 w-full max-w-sm' onSubmit={handleLogin}>
 
                 <div className='flex items-center gap-2 border rounded p-2 bg-white'>
@@ -69,6 +70,12 @@ const StudentLogin = () => {
             <p className='mt-4 text-sm'>
                 Don't have an account? <Link to="/StudentRegister" className='text-blue-600 hover:underline'>Register</Link>
             </p>
+
+            <div className="w-full flex justify-end mt-5 max-w-sm">
+                <Link to="/teacherLogin" className="text-blue-500 text-2xl">
+                    <FaChalkboardTeacher></FaChalkboardTeacher>
+                </Link>
+            </div>
         </div>
     );
 };

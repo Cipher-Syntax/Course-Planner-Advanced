@@ -6,7 +6,9 @@ import { IoMdAdd } from 'react-icons/io';
 
 const TeacherCourseDetails = () => {
     const { code } = useParams();
-    const course = CourseData.find((c) => c.code === code);
+    // const course = CourseData.find((c) => c.code === code);
+    const storedMovies = JSON.parse(localStorage.getItem('courses')) || []
+    const course = storedMovies.find((c) => c.code === code)
 
     if (!course) return <p className="p-6 text-gray-500">Course not found.</p>;
 
