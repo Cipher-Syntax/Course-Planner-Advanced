@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { getCourses, saveCourses } from "../utils/storage";
 
 const TasksDetails = ({ course, taskId }) => {
-    const task = course.tasks?.find((task) => task.id === taskId);
+    const task = course.tasks?.find((task) => task.id == taskId);
     const [uploadFile, setUploadFile] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     useEffect(() => {
         const data = getCourses();
         const currentCourse = data.find((c) => c.code === course.code);
-        const currentTasks = currentCourse?.tasks.find((t) => t.id === taskId)
+        const currentTasks = currentCourse?.tasks.find((t) => t.id == taskId)
 
         if(currentTasks?.uploaded_file){
             setUploadFile(currentTasks.uploaded_file)

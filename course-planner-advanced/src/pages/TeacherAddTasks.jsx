@@ -40,7 +40,8 @@ const TeacherAddTasks = () => {
             description: description,
             due_date: dueDate,
             time: time,
-            criteria: criteria
+            criteria: criteria,
+            uploaded_file: null
         }
 
         const updatedTasksInCourse = storedMovies.map((course) => {
@@ -56,6 +57,12 @@ const TeacherAddTasks = () => {
         localStorage.setItem('courses', JSON.stringify(updatedTasksInCourse));
 
         setMessage("Task added successfully")
+        setTaskTitle('')
+        setDescription('')
+        setDueDate('')
+        setTime('')
+        setCriteria([{ criteriaName: '', criteriaDescription: '', score: '' },])
+
         const timer = setTimeout(() => {
             setMessage('')
         }, 2000)
