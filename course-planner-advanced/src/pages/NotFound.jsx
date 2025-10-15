@@ -1,0 +1,14 @@
+import React from 'react'
+import { RiEmotionSadLine } from "react-icons/ri";
+
+const NotFound = () => {
+    return (
+        <div className='min-h-screen flex items-center justify-center flex-col text-gray-500'>
+            <RiEmotionSadLine size={150}></RiEmotionSadLine>
+            <h1 className='font-extrabold text-7xl leading-relaxed tracking-wider'>404 Not Found</h1>
+            <p className='font-medium'>The Page you are looking for doesn't exist or an other error occured.</p>
+        </div>
+    )
+}
+
+export default NotFound

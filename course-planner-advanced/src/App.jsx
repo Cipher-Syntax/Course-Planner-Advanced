@@ -1,6 +1,6 @@
 import Reat from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks, TeacherAddSubject } from './pages'
+import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks, TeacherAddSubject, NotFound } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
 import { Header } from './components'
@@ -39,6 +39,7 @@ const App = () => {
                 </Route>
                 <Route path='/teachers' element={<Teachers></Teachers>}></Route>
                 <Route path='/help' element={<Help></Help>}></Route>
+                <Route path='*' element={<NotFound></NotFound>}></Route>
                 
             </Routes>
         </BrowserRouter>
