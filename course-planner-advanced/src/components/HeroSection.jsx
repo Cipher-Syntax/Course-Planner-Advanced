@@ -8,11 +8,11 @@ const HeroSection = ({ q, setSearchParams }) => {
         <section className='w-full px-4 sm:px-8 md:px-10'>
             <div className='mt-10 sm:mt-16 md:mt-20 text-center sm:text-left'>
                 {
-                    currentStudentLoggedIn && <p className='text-3xl sm:text-5xl font-bold leading-relaxed tracking-wide'>Welcome {currentStudentLoggedIn.username}</p>
+                    currentStudentLoggedIn && <p className='text-3xl sm:text-5xl font-bold leading-relaxed tracking-wide'>{currentStudentLoggedIn.username}'s Courses</p>
                 }
-                <h1 className='text-2xl sm:text-3xl md:text-4xl leading-relaxed tracking-wide font-bold'>
+                {/* <h1 className='text-2xl sm:text-3xl md:text-4xl leading-relaxed tracking-wide font-bold'>
                     My Courses
-                </h1>
+                </h1> */}
                 <p className='text-sm sm:text-base'>
                     Stay organized and keep track of your academic progress
                 </p>

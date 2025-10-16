@@ -1,6 +1,6 @@
 import Reat from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks, TeacherAddSubject, NotFound } from './pages'
+import { Home, CourseList, CourseDetails, CourseTasks, Help, Teachers, StudentRegister, TeacherLogin, StudentLogin, TeacherDashboard, TeacherCourseDetails, TeacherAddTasks, TeacherAddSubject, NotFound, Layout } from './pages'
 import { getCourses, saveCourses } from './utils/storage'
 import { CourseData } from './data/CourseData'
 import { Header } from './components'
@@ -23,24 +23,27 @@ const App = () => {
     return (
         
         <BrowserRouter>
-            {/* <Header></Header> */}
             <Routes>
-                <Route path='/studentRegister' element={<StudentRegister></StudentRegister>}></Route>
-                <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
-                <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
-                <Route path='/teacherDashboard' element={<TeacherDashboard></TeacherDashboard>}></Route>
-                <Route path='/teacherAddSubject' element={<TeacherAddSubject></TeacherAddSubject>}></Route>
-                <Route path='/teacherAddTasks/:code' element={<TeacherAddTasks></TeacherAddTasks>}></Route>
-                <Route path='/teacherCourseDetails/:code' element={<TeacherCourseDetails></TeacherCourseDetails>}></Route>
-                <Route path='/' element={<Home></Home>}></Route>
-                <Route path='/course' element={<CourseList></CourseList>}></Route>
-                <Route path='/course/:code' element={<CourseDetails></CourseDetails>}>
-                    <Route path='tasks' element={<CourseTasks></CourseTasks>} />
+                    <Route path='/' element={<Home></Home>}></Route>
+                    <Route path='/studentRegister' element={<StudentRegister></StudentRegister>}></Route>
+                    <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
+                    <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
+
+                <Route element={<Layout></Layout>}>
+                    <Route path='/course' element={<CourseList></CourseList>}></Route>
+                    <Route path='/course/:code' element={<CourseDetails></CourseDetails>}>
+                        <Route path='tasks' element={<CourseTasks></CourseTasks>} />
+                    </Route>
+                    <Route path='/teachers' element={<Teachers></Teachers>}></Route>
+                    
+                    <Route path='/teacherDashboard' element={<TeacherDashboard></TeacherDashboard>}></Route>
+                    <Route path='/teacherAddSubject' element={<TeacherAddSubject></TeacherAddSubject>}></Route>
+                    <Route path='/teacherAddTasks/:code' element={<TeacherAddTasks></TeacherAddTasks>}></Route>
+                    <Route path='/teacherCourseDetails/:code' element={<TeacherCourseDetails></TeacherCourseDetails>}></Route>
+                    <Route path='/help' element={<Help></Help>}></Route>
                 </Route>
-                <Route path='/teachers' element={<Teachers></Teachers>}></Route>
-                <Route path='/help' element={<Help></Help>}></Route>
-                <Route path='*' element={<NotFound></NotFound>}></Route>
                 
+                    <Route path='*' element={<NotFound></NotFound>}></Route>
             </Routes>
         </BrowserRouter>
     )

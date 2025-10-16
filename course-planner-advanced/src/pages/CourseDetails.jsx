@@ -18,7 +18,7 @@ const CourseDetails = () => {
 
     return (
         <div>
-            <Header />
+            {/* <Header></Header> */}
             <div className='w-full px-4 md:px-20 mt-10 md:mt-20'>
                 <Link to={`/course/?${search}`} className='flex items-center gap-x-2 cursor-pointer mb-6'>
                     <IoIosArrowRoundBack size={30} />
@@ -81,7 +81,7 @@ const CourseDetails = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     )
 }

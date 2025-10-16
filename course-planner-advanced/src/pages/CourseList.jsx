@@ -34,7 +34,7 @@ const CourseList = () => {
 
     return (
         <>  
-            <Header></Header>
+            {/* <Header></Header> */}
             <HeroSection q={q} setSearchParams={setSearchParams}/>
             <Filtering searchParams={searchParams} setSearchParams={setSearchParams}
             />
@@ -97,7 +97,7 @@ const CourseList = () => {
                 }
             </div>
             <FloatingHelpButton></FloatingHelpButton>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     )
 }

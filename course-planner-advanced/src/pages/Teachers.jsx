@@ -19,7 +19,7 @@ const Teachers = () => {
 
     return (
         <>
-            <Header />
+            {/* <Header></Header> */}
             <div className="px-20 mt-16">
                 <h1 className="text-4xl font-bold mb-10 flex items-center gap-x-3">
                     <FaChalkboardTeacher size={34} className="text-green-600" />

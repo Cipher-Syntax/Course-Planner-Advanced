@@ -12,6 +12,7 @@ import TeacherCourseDetails from './TeacherCourseDetails'
 import TeacherAddTasks from './TeacherAddTasks'
 import TeacherAddSubject from './TeacherAddSubject'
 import NotFound from './NotFound'
+import Layout from './Layout'
 
 export {
     Home,
@@ -28,4 +29,5 @@ export {
     TeacherAddTasks,
     TeacherAddSubject,
     NotFound,
+    Layout,
 }
