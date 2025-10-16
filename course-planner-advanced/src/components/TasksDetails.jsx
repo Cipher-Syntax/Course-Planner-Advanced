@@ -8,17 +8,6 @@ const TasksDetails = ({ course, taskId }) => {
     const [uploadFile, setUploadFile] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    useEffect(() => {
-        const data = getCourses();
-        const currentCourse = data.find((c) => c.code === course.code);
-        const currentTasks = currentCourse?.tasks.find((t) => t.id == taskId)
-
-        if(currentTasks?.uploaded_file){
-            setUploadFile(currentTasks.uploaded_file)
-            setIsSubmitted(true)
-        }
-
-    }, [course.code, taskId])
 
     if (!task) return <p className="text-gray-500">Task not found.</p>;
 
@@ -47,6 +36,18 @@ const TasksDetails = ({ course, taskId }) => {
         saveCourses(updatedCourses);
         setIsSubmitted(prev => !prev);
     };
+
+    useEffect(() => {
+        const data = getCourses();
+        const currentCourse = data.find((c) => c.code === course.code);
+        const currentTasks = currentCourse?.tasks.find((t) => t.id == taskId)
+
+        if(currentTasks?.uploaded_file){
+            setUploadFile(currentTasks.uploaded_file)
+            setIsSubmitted(true)
+        }
+
+    }, [course.code, taskId])
 
 
 

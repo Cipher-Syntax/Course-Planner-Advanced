@@ -29,6 +29,12 @@ const App = () => {
                     <Route path='/teacherLogin' element={<TeacherLogin></TeacherLogin>}></Route>
                     <Route path='/studentLogin' element={<StudentLogin></StudentLogin>}></Route>
 
+                    <Route path='/teacherDashboard' element={<TeacherDashboard></TeacherDashboard>}></Route>
+                    <Route path='/teacherAddSubject' element={<TeacherAddSubject></TeacherAddSubject>}></Route>
+                    <Route path='/teacherAddTasks/:code' element={<TeacherAddTasks></TeacherAddTasks>}></Route>
+                    <Route path='/teacherCourseDetails/:code' element={<TeacherCourseDetails></TeacherCourseDetails>}></Route>
+                    <Route path='/help' element={<Help></Help>}></Route>
+
                 <Route element={<Layout></Layout>}>
                     <Route path='/course' element={<CourseList></CourseList>}></Route>
                     <Route path='/course/:code' element={<CourseDetails></CourseDetails>}>
@@ -36,11 +42,6 @@ const App = () => {
                     </Route>
                     <Route path='/teachers' element={<Teachers></Teachers>}></Route>
                     
-                    <Route path='/teacherDashboard' element={<TeacherDashboard></TeacherDashboard>}></Route>
-                    <Route path='/teacherAddSubject' element={<TeacherAddSubject></TeacherAddSubject>}></Route>
-                    <Route path='/teacherAddTasks/:code' element={<TeacherAddTasks></TeacherAddTasks>}></Route>
-                    <Route path='/teacherCourseDetails/:code' element={<TeacherCourseDetails></TeacherCourseDetails>}></Route>
-                    <Route path='/help' element={<Help></Help>}></Route>
                 </Route>
                 
                     <Route path='*' element={<NotFound></NotFound>}></Route>
