@@ -39,7 +39,7 @@ const Filtering = ({ searchParams, setSearchParams }) => {
                         value={selectedDay}
                         onChange={(e) => updateParam("day", e.target.value)}
                     >
-                        <option value="">Day</option>
+                        <option value="">Days</option>
                         {
                             allDays.map((day, index) => (
                                 <option key={index} value={day.toLowerCase()}>{day}</option>
@@ -52,10 +52,10 @@ const Filtering = ({ searchParams, setSearchParams }) => {
                         value={selectedTeacher}
                         onChange={(e) => updateParam("teacher", e.target.value)}
                     >
-                        <option value="">Teacher</option>
+                        <option value="">Professors</option>
                         {
                             allTeachers.map((teacher, index) => (
-                                <option key={index} value={teacher.toLowerCase().replace(/\s+/g, "-")}>{teacher}</option>
+                                <option key={index} value={teacher.toLowerCase().replace(/\s+/g, "-")}>{teacher.toLowerCase().includes("Prof") ? teacher : `Prof ${teacher}`}</option>
                             ))
                         }
                     </select>

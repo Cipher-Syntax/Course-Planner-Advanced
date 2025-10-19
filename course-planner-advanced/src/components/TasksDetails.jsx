@@ -92,7 +92,7 @@ const TasksDetails = ({ course, taskId }) => {
                             <tr>
                                 <td className="border px-3 py-2 font-bold" colSpan={2}>Total</td>
                                 <td className="border px-3 py-2 font-bold">
-                                    {task.criteria.reduce((total, crit) => total + (crit.score ?? 0), 0)}
+                                    {task.criteria.reduce((total, crit) => total + (Number(crit.score) ?? 0), 0)}
                                 </td>
                             </tr>
                         </tbody>
